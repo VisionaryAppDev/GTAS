@@ -39,10 +39,10 @@
         console.log("TRACKING 5:: ");
         // The first one will be the active tab
         watchlist.types = {
-    		"Passenger": {
-                entity: "PASSENGER",
+    		"Blacklist": {
+                entity: "BLACKLIST",
                 icon: "user",
-                columns: gridOptionsLookupService.getLookupColumnDefs('blacklist').PASSENGER
+                columns: gridOptionsLookupService.getLookupColumnDefs('blacklist').BLACKLIST
             },
     		"Document": {
                 entity: "DOCUMENT",
@@ -130,7 +130,7 @@
         Object.keys(watchlist.types).forEach(function (key) {
         	console.log("TRACKING 11:: ");
         	var glyphicon = null;
-        	if(key === "Passenger"){
+        	if(key === "Blacklist"){
         		glyphicon = $sce.trustAsHtml('<i class="glyphicon glyphicon-user"></i>');
         	} else if( key === "Document"){
         		glyphicon = $sce.trustAsHtml('<i class="glyphicon glyphicon-file"></i>');
@@ -152,7 +152,7 @@
             $scope.gridApi.selection.clearSelectedRows();
             $scope.gridApi.selection.selectRow(row);
             $scope[$scope.activeTab] = $.extend({}, row);
-            if ($scope.activeTab === "Passenger" && $scope[$scope.activeTab].dob !== undefined) {
+            if ($scope.activeTab === "BlackList" && $scope[$scope.activeTab].dob !== undefined) {
                 $scope[$scope.activeTab].dob = moment($scope[$scope.activeTab].dob).toDate();
             }
 

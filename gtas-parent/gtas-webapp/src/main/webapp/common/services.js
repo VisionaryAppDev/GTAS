@@ -988,7 +988,7 @@
                 }
               ],
               blacklist: {
-            	  PASSENGER: [
+            	  BLACKLIST: [
 	                {
 	                  field: "id",
 	                  name: "id",
@@ -1026,16 +1026,16 @@
 	                  headerCellFilter: "translate",
 	                  cellTemplate:
 	                    '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
-	                  type: "integer"
+	                  type: "string"
 	                },
 	                {
-	                    field: "report",
-	                    name: "report",
+	                    field: "notify",
+	                    name: "notify",
 	                    //displayName: "Number",
-	                    displayName: "Report",
+	                    displayName: "Notify",
 	                    headerCellFilter: "translate",
 	                    cellTemplate:
-	                      '<md-button class="md-primary btn-danger"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%; color: white;">Report</md-button>',
+	                      '<md-button class="md-primary btn-danger fa fa-telegram"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 30%; color: white;"> Notify</md-button>',
 	                    type: "integer"
 	                  }
 	              ],
