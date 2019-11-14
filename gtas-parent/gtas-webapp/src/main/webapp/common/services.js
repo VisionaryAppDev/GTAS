@@ -540,6 +540,7 @@
                 enableVerticalScrollbar: 2
               }),
               watchlist: defaultOptions,
+              blacklist: defaultOptions,
               noteType: defaultOptions,
               zipLogs: {
                 enableRowSelection: true,
@@ -986,6 +987,102 @@
                   enableColumnMenu: false
                 }
               ],
+              blacklist: {
+            	  PASSENGER: [
+	                {
+	                  field: "id",
+	                  name: "id",
+	                  //displayName: "Type",
+	                  displayName: "ID",
+	                  headerCellFilter: "translate",
+	                  cellTemplate:
+	                    '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
+	                  type: "string"
+	                },
+	                {
+	                    field: "firstName",
+	                    name: "firstName",
+	                    //displayName: "Type",
+	                    displayName: "First Name",
+	                    headerCellFilter: "translate",
+	                    cellTemplate:
+	                      '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
+	                    type: "string"
+	                },
+	                {
+	                  field: "lastName",
+	                  name: "lastName",
+	                  displayName: "Last Name",
+	                  headerCellFilter: "translate",
+	                  cellTemplate:
+	                    '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
+	                  type: "string"
+	                },
+	                {
+	                  field: "country",
+	                  name: "country",
+	                  //displayName: "Number",
+	                  displayName: "Country",
+	                  headerCellFilter: "translate",
+	                  cellTemplate:
+	                    '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
+	                  type: "integer"
+	                },
+	                {
+	                    field: "report",
+	                    name: "report",
+	                    //displayName: "Number",
+	                    displayName: "Report",
+	                    headerCellFilter: "translate",
+	                    cellTemplate:
+	                      '<md-button class="md-primary btn-danger"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%; color: white;">Report</md-button>',
+	                    type: "integer"
+	                  }
+	              ],
+	              DOCUMENT: [
+	                  {
+	                    field: "dob",
+	                    name: "dob",
+	                    //displayName: "DOB",
+	                    displayName: "doc.dob",
+	                    headerCellFilter: "translate",
+	                    width: 100,
+	                    cellTemplate:
+	                      '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD | date:\'yyyy-MM-dd\'}}</md-button>',
+	                    type: "date"
+	                  },
+	                  {
+	                    field: "firstName",
+	                    name: "firstName",
+	                    //displayName: "First Name",
+	                    displayName: "pass.firstname",
+	                    headerCellFilter: "translate",
+	                    cellTemplate:
+	                      '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
+	                    type: "string"
+	                  },
+	                  {
+	                    field: "lastName",
+	                    name: "lastName",
+	                    //displayName: "Last Name",
+	                    displayName: "pass.lastname",
+	                    headerCellFilter: "translate",
+	                    cellTemplate:
+	                      '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{COL_FIELD}}</md-button>',
+	                    type: "string"
+	                  },
+	                  {
+	                    field: "categoryId",
+	                    name: "categoryId",
+	                    //displayName: "Number",
+	                    displayName: "Category",
+	                    headerCellFilter: "translate",
+	                    cellTemplate:
+	                      '<md-button class="md-primary"  ng-click="grid.appScope.editRecord(row.entity)" style="min-width: 0; margin: 0 auto; width: 100%;" >{{grid.appScope.categories[COL_FIELD]}}</md-button>',
+	                    type: "integer"
+	                  }
+	                ],
+              },
               watchlist: {
                 DOCUMENT: [
                   {

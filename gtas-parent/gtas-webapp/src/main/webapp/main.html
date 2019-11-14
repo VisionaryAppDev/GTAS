@@ -72,6 +72,10 @@
                 <i class="fa fa-eye" aria-hidden="true"></i>
                 &nbsp;{{'nav.watchlist' | translate}}</a>
               </li>
+              <li data-has-role="[{{ ROLES.ADMIN }}, {{ ROLES.MANAGE_BLACKLIST }}]"><a href="#/blacklists">
+                <i class="fa fa-warning" aria-hidden="true"></i>
+                &nbsp;{{'nav.blacklist' | translate}}</a>
+              </li>
               <li data-has-role="[{{ ROLES.ADMIN }}]">
                 <a href="#/admin">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -282,6 +286,7 @@
 <script src='pax/PaxFactory.js'></script>
 <script src='build/BuildController.js'></script>
 <script src='watchlists/WatchListController.js'></script>
+<script src='blacklists/BlackListController.js'></script>
 <script src='admin/AdminController.js'></script>
 <script src='admin/UserController.js'></script>
 <script src='admin/UploadController.js'></script>

@@ -642,6 +642,17 @@ var app;
                         }
                     }
                 })
+                .state('blacklists', {
+                    url: '/blacklists',
+                    authenticate: true,
+                    roles: [USER_ROLES.ADMIN, USER_ROLES.MANAGE_WATCHLIST],
+                    views: {
+                        '@': {
+                            controller: 'BlackListController',
+                            templateUrl: 'blacklists/blacklists.html'
+                        }
+                    }
+                })
                 .state('userlocation', {
                     url: '/userlocation',
                     authenticate: true,
